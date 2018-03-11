@@ -1,0 +1,28 @@
+Arch.
+====
+
+  +========+
+  | Master |
+  |  init
+  |    read conf - list of nodes
+  |  loop
+  |    ?
+  |  command
+  |    nodes
+  |      node -> execute command
+  |
+  +========+
+
+      +==============================+
+      | Child 
+      |   node - started by pm
+      |     init
+      |       read conf
+      |       available command
+      |     express
+      |       /command -> execute -> put log line to array, limit to 100 lines
+      |       /list process
+      |       /getstdout
+      |
+
+
